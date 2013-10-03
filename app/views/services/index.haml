@@ -1,0 +1,7 @@
+%section.services
+  - @services.each_with_index do |service, n|
+    %article{ 'class' => "service-#{n}" }
+      %header
+        %h1= link_to service.name, service.url, target: '_blank'
+      %section.description
+        = service.description

@@ -25,11 +25,13 @@ group :doc do
 end
 
 group :test do
-  gem 'rspec-rails',      '~> 2.14.0'
-  gem 'rr',               '~> 1.1.2', require: false
-  gem 'capybara',         '~> 2.1.0'
-  gem 'shoulda-matchers', '~> 2.4.0'
-  gem "launchy",          '~> 2.3.0'
+  gem 'rspec-rails',        '~> 2.14.0'
+  gem 'rr',                 '~> 1.1.2', require: false
+  gem 'capybara',           '~> 2.1.0'
+  gem 'shoulda-matchers',   '~> 2.4.0'
+  gem 'launchy',            '~> 2.3.0'
+  gem 'database_cleaner',   '~> 1.1.1'
+  gem "factory_girl_rails", '~> 4.0'
 end
 
 group :test, :development do
