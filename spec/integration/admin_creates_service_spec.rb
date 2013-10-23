@@ -17,10 +17,10 @@ feature "Admin creates a new service" do
   end
 
   def create_new_service
-    fill_in 'Name', with: 'Google'
-    fill_in 'Url', with: "http://www.google.com"
+    fill_in 'Name',        with: 'Google'
+    fill_in 'Url',         with: "http://www.google.com"
     fill_in 'Description', with: 'Description'
-    # fill_in 'Categories', with: 'Cat1, Cat2'
+    fill_in 'Categories',  with: 'Cat1, Cat2'
     click_button 'CREATE SERVICE'
   end
 
@@ -28,5 +28,8 @@ feature "Admin creates a new service" do
     expect(page).to have_content('New service created!')
     expect(page).to have_content('Google')
     expect(page).to have_content('Description')
+    # save_and_open_page
+    expect(page).to have_content('Cat1')
+    expect(page).to have_content('Cat2')
   end
 end

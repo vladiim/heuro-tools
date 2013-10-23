@@ -3,3 +3,6 @@
 
 %section
   = @service.description
+  %ul
+    - @service.categories.each do |category|
+      %li= category.name

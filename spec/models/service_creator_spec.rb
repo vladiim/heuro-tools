@@ -13,7 +13,9 @@ require File.expand_path("app/models/service_creator")
 
 describe ServiceCreator do
   let(:service) { ServiceCreator.new(values) }
-  let(:values)  { { 'name' => 'NAME', 'url' => 'URL', 'description' => 'DESCRIPTION' } }
+  let(:values)  { { 'name' => 'NAME', 'url' => 'URL',
+                    'description' => 'DESCRIPTION',
+                    'categories' => 'Cat1, Cat2' } }
   let(:record)  { OpenStruct.new }
 
   before { mock(ServiceRecord).new { record } }
@@ -26,6 +28,7 @@ describe ServiceCreator do
     it "sets the record's attributes to the values passed in" do
       expect(service.record.name).to        eq('NAME')
       expect(service.record.url).to         eq('URL')
+      # expect(service.record.categories).to  eq(['Cat1', 'Cat2'])
       expect(service.record.description).to eq('DESCRIPTION')
     end
   end

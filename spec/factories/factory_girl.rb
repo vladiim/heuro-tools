@@ -7,6 +7,11 @@ FactoryGirl.define do
     description 'Its da googlez'
   end
 
+  factory :category_record do
+    name { "DATA #{rand(10000)}" }
+    service_record_id 1
+  end
+
   factory :user do
     email { "email-#{rand(1000)}@gmail.com" }
     password "password"
