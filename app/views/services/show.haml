@@ -2,7 +2,12 @@
   %h1= link_to @service.name, @service.url, target: '_blank'
 
 %section
-  = @service.description
+  %header
+    %h4 Description
+  %p= @service.description
+
+  %header
+    %h4 Categories
   %ul
     - @service.categories.each do |category|
       %li= category.name

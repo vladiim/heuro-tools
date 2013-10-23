@@ -11,7 +11,6 @@ class ServicesController < ApplicationController
   end
 
   def show
-    @flash   = flash.alert
     @service = ServiceFinder.get_record(params['id'])
   end
 end
