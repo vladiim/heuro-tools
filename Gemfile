@@ -39,3 +39,8 @@ end
 group :test, :development do
   gem 'debugger', '~> 1.6.2'
 end
+
+
+group :production do
+  gem 'rails_12factor', '~> 0.0.2'
+end
