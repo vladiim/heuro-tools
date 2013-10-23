@@ -1,6 +1,6 @@
 = simple_form_for @service do |f|
   = f.input :name
   = f.input :url
-  = f.input :description
+  = f.input :description, as: :text
   = f.input :categories
   = f.submit 'CREATE SERVICE', class: 'btn btn-primary'
